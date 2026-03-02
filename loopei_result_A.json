@@ -1,0 +1,33 @@
+{
+  "cut_value": 3728.4132,
+  "cut_ratio": 0.8844,
+  "total_weight": 4215.6655,
+  "partition": [
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    0
+  ],
+  "certified_exact": true,
+  "nodes": 21,
+  "edges": 28,
+  "method": "LoopEi QAOA Hybrid + Exact Certification",
+  "framework": "LoopEi LLC | USPTO #19/303,438"
+}

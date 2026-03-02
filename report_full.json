@@ -1,0 +1,48 @@
+{
+  "cut_value": 3728.413221,
+  "cut_ratio_mpes": 0.8844,
+  "total_weight": 4215.6655,
+  "certified_exact": true,
+  "plateau_optimal": true,
+  "blocking_node_set": [
+    0,
+    1,
+    3,
+    5,
+    9,
+    10,
+    13,
+    15,
+    19,
+    20
+  ],
+  "warmstart_bitstring": "011010001011001110010",
+  "trust": {
+    "balance": 0.9091,
+    "isolation": 1.0,
+    "redundancy": 1.0,
+    "n_minus_one_resilience": 0.8974,
+    "max_single_edge_drop": 382.7185,
+    "avg_edge_drop": 133.1576,
+    "bottleneck_ratio": 0.1156,
+    "load_concentration": 0.5,
+    "trust_score": 0.9382
+  },
+  "qaoa_bridge": null,
+  "framework": {
+    "name": "LoopEi Framework",
+    "company": "LoopEi LLC",
+    "patent": "USPTO #19/303,438",
+    "cage": "16GM4",
+    "method": "LoopEi QAOA Hybrid + Exact Certification + LQTrust++",
+    "components": [
+      "Tesla 3-6-9 resonant seeding",
+      "G1 Unity Governor",
+      "PhaseMemory global tracking",
+      "Vortex escape (plateau navigation)",
+      "LQTrust++ resilience framework",
+      "k-flip plateau optimality proof",
+      "GPSEi warm-start bridge"
+    ]
+  }
+}

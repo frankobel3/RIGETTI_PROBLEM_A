@@ -1,0 +1,68 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath, graphicx, booktabs}
+
+\title{MPES Workflow Summary — 21-Node Grid}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Problem}
+
+Compute the Maximum Power Energy Section (MPES) of a 21-node grid modeled as a weighted graph.
+
+\[
+\text{Cut}(S) = \sum_{(i,j)\in E} w_{ij}\,\mathbf{1}[i \in S, j \notin S]
+\]
+
+\[
+\text{MPES} = \frac{\text{Cut}(S^*)}{\sum w_{ij}}
+\]
+
+\section*{Pipeline}
+
+\begin{itemize}
+\item Exact optimal cut via half-enumeration
+\item Plateau verification ($k \le 4$ flips)
+\item Trust metrics: balance, redundancy, N-1 resilience, bottleneck
+\item Optional QAOA bridge
+\end{itemize}
+
+\section*{Results}
+
+\begin{tabular}{ll}
+\toprule
+Metric & Value \\
+\midrule
+Nodes & 21 \\
+Edges & 28 \\
+Cut Value & 3728.4132 \\
+MPES & 0.8844 \\
+Trust Score & 0.9382 \\
+Plateau (k ≤ 4) & TRUE \\
+\bottomrule
+\end{tabular}
+
+\section*{Run}
+
+\begin{verbatim}
+pip install -r requirements.txt
+python RigettiASolver.py --input problema.csv
+\end{verbatim}
+
+\section*{Outputs}
+
+\begin{itemize}
+\item report\_full.json
+\item loopei\_result\_A.json
+\item loopei\_cut\_edges\_A.json
+\item team\_summary.csv
+\end{itemize}
+
+\section*{Notes}
+
+Deterministic workflow. Plateau check is local. Trust metrics are heuristic indicators.
+
+\end{document}
